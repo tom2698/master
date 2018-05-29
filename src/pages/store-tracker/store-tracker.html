@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Store Tracker</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<h1 style="text-align:center; font-weight:bold;"> Mario's Pizza - Store Tracker </h1>
+	<div #map id='map'></div>
+	
+	<input [(ngModel)]="postcode" type="text" name="postcode" placeholder="Postcode" id="textfield">
+	<button style="float:right;" type="button" id="cartButton" (click) = "Move()">Search</button>
+</ion-content>

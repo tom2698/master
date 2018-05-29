@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Contact</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h1 style="text-align:center; font-weight:bold;"> Mario's Pizza - Contact Us </h1>
+	<h4 style="text-align:center"> Details </h4>
+	<input [(ngModel)]="fname" type="text" name="fullname" placeholder="Full Name" id="textfield"><br><br>
+	<input [(ngModel)]="faddress" type="text" name="address" placeholder="Address" id="textfield"><br><br>
+	<input [(ngModel)]="femail" type="text" name="email" placeholder="Email" id="textfield"><br><br>
+	<input [(ngModel)]="fnumber" type="text" name="phonenumber" placeholder="Phone Number" id="textfield"> <br><br>
+	<textarea [(ngModel)]="fmessage" name="messagefield" cols="40" rows="5" id="messagefield" placeholder="Message"></textarea><br><br>
+	Add an image
+	<input #fileInput type="file" accept="image/*" (change)="imageSelected(fileInput.files)" multiple><br><br>
+	<input [(ngModel)]="fnewsletter" type="checkbox" name="newsletter" value="newsletter">Receive newsletters
+	<button style="float:right;" type="button" id="cartButton" (click) = "Send()">Send</button><br><br><br>
+	<h4 style="text-align:center"> Previous Contacts </h4>
+	<div *ngFor="let name of names; index as i">
+		<h5 style="text-align:center"> Message </h5>
+		<p> <b> Name: </b> {{name}} </p>
+		<p> <b> Address: </b> {{addresses[i]}} </p>
+		<p> <b> Email: </b> {{emails[i]}} </p>
+		<p> <b> Phone Number: </b> {{numbers[i]}} </p>
+		<p> <b> Message: </b> {{messages[i]}} </p>
+		<p> <b> Receive Newsletters: </b> {{newsletters[i]}} </p>
+		<img src={{images[i]}}>
+		<br><br>
+	</div>
+	
+	<button style="float:left;" type="button" id="cartButton">Facebook</button>
+	<button style="float:right;" type="button" id="cartButton">Twitter</button>
+</ion-content>

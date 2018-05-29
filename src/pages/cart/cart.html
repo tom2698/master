@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cart</ion-title>
+  </ion-navbar>
+	
+</ion-header>
+
+
+<ion-content padding>
+	<h1 style="text-align:center" id="title"> Mario's Pizza - Cart </h1>
+	<div id="content">
+			<h3> &emsp;Pizzas&emsp;&emsp;&emsp;&emsp;&emsp; Quantity</h3>
+			<ion-list>
+				<ion-item-sliding *ngFor="let pizza of pizza_list; index as i">
+					<ion-item>
+						<p style="float:left">{{pizza}}</p><p style="float:right">{{quantity_list[i]}}</p>
+					</ion-item>
+					<ion-item-options side="right">
+						<button ion-button (click)="editPizza(i)">
+							Edit
+						</button>
+						<button ion-button color="danger" (click)="deletePizza(i)">
+							Delete
+						</button>
+					</ion-item-options>
+				</ion-item-sliding>
+			</ion-list>
+
+		<br style="clear:both;"/>
+	</div>
+	<p> <b>Total Cost:</b> ${{cost}} </p>
+	<h3 style="text-align:center" id="subtitle"> Details </h3>
+	
+	<div id="inputDiv">
+		<input [(ngModel)]="fullname" type="text" name="fullname" placeholder="Full Name" id="textfield">
+		<input [(ngModel)]="email" type="text" name="email" placeholder="Email" id="textfield">
+		<input [(ngModel)]="phonenumber" type="text" name="phonenumber" placeholder="Phone Number" id="textfield">
+		<input [(ngModel)]="creditcarddetails" type="text" name="creditcarddetails" placeholder="Credit Card Details" id="textfield">
+		<input [(ngModel)]="postcode" type="text" name="postcode" placeholder="Postcode" id="textfield"><br><br>
+		<p> Order to be placed for(24hr time): </p>
+		<ion-item>
+			<ion-datetime class="datetimeColour" displayFormat="H:mm MMMM DD" [(ngModel)]="myDate"></ion-datetime>
+		</ion-item><br>
+		<button (click)="cartModal()" type="button" id="orderButton">Order</button>
+	</div>
+
+</ion-content>

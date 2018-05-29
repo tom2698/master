@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 style="text-align:center; font-weight:bold;"> Mario's Pizza - Menu </h1>
+  <div id="content1">
+	<div id="pic">
+		<img (click)="DietaryModal1()" src="../assets/imgs/supremepizza.jpg" alt="Supreme Pizza">
+	</div>
+	<div id="text" style="text-align:center;">
+		<h4> Supreme Pizza </h4>
+		<h5 style="text-align:center;"> $12 </h5>
+		<input [(ngModel)]="quan1" type="text" name="quan1" placeholder="Quantity" id="quan"><br><br>
+		<button (click) = "AddToCart('Supreme')" type="button" id="cartButton">Add To Cart</button>
+	</div>
+	<br style="clear:both;"/>
+  </div><br>
+	
+  <div id="content2" style="text-align:center;">
+	<div id="pic">
+		<img (click)="DietaryModal2()" src="../assets/imgs/pepperoni.jpg" alt="Pepperoni Pizza">
+	</div>
+	<div id="text">
+		<h4> Pepperoni Pizza </h4>
+		<h5 style="text-align:center;"> $8 </h5>
+		<input [(ngModel)]="quan2" type="text" name="quan2" placeholder="Quantity" id="quan"><br><br>
+		<button (click) = "AddToCart('Pepperoni')" type="button" id="cartButton">Add To Cart</button>
+	</div>
+	<br style="clear:both;"/>
+  </div><br>
+	
+  <div id="content3" style="text-align:center;">
+	<div id="pic">
+		<img (click)="DietaryModal3()" src="../assets/imgs/bbqbeef.jpg" alt="BBQ Beef Pizza">
+	</div>
+	<div id="text">
+		<h4> BBQ Beef Pizza </h4>
+		<h5 style="text-align:center;"> $8 </h5>
+		<input [(ngModel)]="quan3" type="text" name="quan3" placeholder="Quantity" id="quan"><br><br>
+		<button (click) = "AddToCart('BBQ Beef')" type="button" id="cartButton">Add To Cart</button>
+	</div>
+	<br style="clear:both;"/>
+  </div>
+</ion-content>

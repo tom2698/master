@@ -1,0 +1,8 @@
+{
+  "name": "Marios Pizza",
+  "app_id": "39e2199d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

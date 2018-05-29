@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Special Offers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<h1 style="text-align:center; font-weight:bold;"> Mario's Pizza - Offers </h1>
+	<div style="text-align: center">
+		<img src="../assets/imgs/offer1.jpg" alt="Pizza Offer1">
+		<h4> Double Hut</h4>
+		<h6> 4 items </h6>
+		<p> 2 Large Pizzas, 1 selected side & a 1.25L Drink</p>
+		<h6 style="float:left;"> $29.95 </h6>
+		<button (click) = "AddToCart('Double')" type="button" style="float:right" id="cartButton">Add To Cart</button>
+	</div>
+	
+	<div style="text-align:center">
+		<img src="../assets/imgs/offer2.jpg" alt="Pizza Offer2">
+		<h4 style="text-align:center"> Triple Hut </h4>
+		<h6> 6 items </h6>
+		<p> 3 Large Pizzas, 2 selected sides & a 1.25L Drink<p>
+		<h6 style="float:left;"> $39.95 </h6>
+		<button (click) = "AddToCart('Triple')" type="button" style="float:right" id="cartButton">Add To Cart</button>
+	</div>
+</ion-content>

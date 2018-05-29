@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Order</ion-title>
+	<ion-buttons end>
+		<button (click)="closeModal()">Close</button>
+	</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<h1 style="text-align:center"> Order Details </h1>
+	<p> Your order has been placed for {{date}}</p>
+	<h3 style="text-align:center"> Order Details </h3>
+	<div>
+		<ion-list>
+			<ion-item *ngFor="let pizza of pizza_list; index as i">
+				<p style="float:left">{{pizza}}</p><p style="float:right">{{quantity_list[i]}}</p>
+			</ion-item>
+		</ion-list>
+		<br style="clear:both;"/>
+	</div>
+	<p> <b>Total Cost:</b> ${{cost}} </p>
+
+	
+	<h3 style="text-align:center"> Your details </h3>
+	<p> <b>Name:</b> {{fullname}} </p>
+	<p> <b>Email:</b> {{email}} </p>
+	<p> <b>Postcode:</b> {{postcode}} </p>
+	<p> <b> Payment:</b> {{card}} </p>
+</ion-content>
