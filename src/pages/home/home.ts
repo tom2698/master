@@ -15,11 +15,11 @@ export class HomePage {
 	constructor(private modal: ModalController, public storage: Storage) {
 		//Update the pizzaNum list
 		storage.get("pizzaNum").then((val) => {
-			var pizzaNum: [number] = [0,0,0];
+			var pizzaNum: [number] = [0,0,0,0,0];
 			pizzaNum = val;
 			if (!pizzaNum)
 			{
-				this.storage.set("pizzaNum", [0,0,0])//Supreme, Pepperoni, BBQ Beef
+				this.storage.set("pizzaNum", [0,0,0,0,0])//Supreme, Pepperoni, BBQ Beef
 			}
 		});
 	}

@@ -12,7 +12,7 @@
 	<h1 style="text-align:center" id="title"> Mario's Pizza - Cart </h1>
 	<div id="content">
 			<h3> &emsp;Pizzas&emsp;&emsp;&emsp;&emsp;&emsp; Quantity</h3>
-			<ion-list>
+			<ion-list id="pizzaList">
 				<ion-item-sliding *ngFor="let pizza of pizza_list; index as i">
 					<ion-item>
 						<p style="float:left">{{pizza}}</p><p style="float:right">{{quantity_list[i]}}</p>
